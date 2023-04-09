@@ -16,7 +16,6 @@ jobs:
           
           echo "# Model metrics" > report.md
           cat metrics.txt >> report.md
-          cml comment feature_importance.png --md >> report.md
-          cml comment residuals.png --md >> report.md
+          echo '![](./feature_importance.png "Feature Importance")' >> report.md
+          echo '![](./residuals.png "Residuals")' >> report.md
           cml comment create report.md
-          
